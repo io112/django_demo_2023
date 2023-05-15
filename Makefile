@@ -3,4 +3,4 @@ install:
 	echo "venv installed!"
 
 run:
-	./start.sh
+	gunicorn django_demo_site.wsgi -w 4
