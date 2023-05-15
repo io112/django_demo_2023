@@ -1,6 +1,6 @@
-poetry install
+python3.7 -m virtualenv prod_venv
+source prod_venv/bin/activate
+pip install -r requirements.txt
 
-python manage.py collectstatic --no-input
 python manage.py migrate
-
-chmod a+x build.sh
+chmod a+x start.sh
